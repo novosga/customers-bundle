@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pt-BR" target-language="pt-BR" datatype="plaintext" original="messages.pt_BR.xlf">
+    <body>
+      <trans-unit id="module.name">
+        <source>module.name</source>
+        <target>Clientes</target>
+      </trans-unit>
+      <trans-unit id="title">
+        <source>title</source>
+        <target>Clientes</target>
+      </trans-unit>
+      <trans-unit id="subtitle">
+        <source>subtitle</source>
+        <target>Gerencie os clientes atendidos</target>
+      </trans-unit>
+      <trans-unit id="label.name">
+        <source>label.name</source>
+        <target>Nome</target>
+      </trans-unit>
+      <trans-unit id="label.email">
+        <source>label.email</source>
+        <target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="label.customer_id">
+        <source>label.customer_id</source>
+        <target>Documento</target>
+      </trans-unit>
+      <trans-unit id="button.new_customer">
+        <source>button.new_customer</source>
+        <target>Novo cliente</target>
+      </trans-unit>
+      <trans-unit id="button.save">
+        <source>button.save</source>
+        <target>Salvar</target>
+      </trans-unit>
+      <trans-unit id="button.back">
+        <source>button.back</source>
+        <target>Voltar</target>
+      </trans-unit>
+      <trans-unit id="label.search">
+        <source>label.search</source>
+        <target>Buscar</target>
+      </trans-unit>
+      <trans-unit id="form.customer.name">
+        <source>form.customer.name</source>
+        <target>Nome</target>
+      </trans-unit>
+      <trans-unit id="form.customer.id">
+        <source>form.customer.id</source>
+        <target>Documento</target>
+      </trans-unit>
+      <trans-unit id="form.customer.email">
+        <source>form.customer.email</source>
+        <target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="label.customer_tickets">
+        <source>label.customer_tickets</source>
+        <target>Últimos atendimentos</target>
+      </trans-unit>
+      <trans-unit id="label.ticket">
+        <source>label.ticket</source>
+        <target>Senha</target>
+      </trans-unit>
+      <trans-unit id="label.status">
+        <source>label.status</source>
+        <target>Situação</target>
+      </trans-unit>
+      <trans-unit id="label.date">
+        <source>label.date</source>
+        <target>Data chegada</target>
+      </trans-unit>
+      <trans-unit id="form.customer.telefone">
+          <source>form.customer.telefone</source>
+          <target>Telefone</target>
+      </trans-unit>
+      <trans-unit id="label.gender">
+          <source>label.gender</source>
+          <target>Gênero</target>
+      </trans-unit>
+      <trans-unit id="label.gender.male">
+          <source>label.gender.male</source>
+          <target>Masculino</target>
+      </trans-unit>
+      <trans-unit id="label.gender.female">
+          <source>label.gender.female</source>
+          <target>Feminino</target>
+      </trans-unit>
+      <trans-unit id="label.gender.unknown">
+          <source>label.gender.unknown</source>
+          <target>Outro</target>
+      </trans-unit>
+      <trans-unit id="label.notes">
+          <source>label.notes</source>
+          <target>Observação</target>
+      </trans-unit>
+      <trans-unit id="label.add_success">
+          <source>label.add_success</source>
+          <target>Agendamento adicionado com successo</target>
+      </trans-unit>
+      <trans-unit id="label.url_api">
+          <source>label.url_api</source>
+          <target>Endereço da API</target>
+      </trans-unit>
+      <trans-unit id="label.service">
+          <source>label.service</source>
+          <target>Serviço</target>
+      </trans-unit>
+      <trans-unit id="label.status_agendado">
+          <source>label.status_agendado</source>
+          <target>Agendado</target>
+      </trans-unit>
+      <trans-unit id="label.status_confirmado">
+          <source>label.status_confirmado</source>
+          <target>Confirmado</target>
+      </trans-unit>
+      <trans-unit id="label.status_nao_compareceu">
+          <source>label.status_nao_compareceu</source>
+          <target>Não compareceu</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

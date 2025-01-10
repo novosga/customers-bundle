@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% trans_default_domain 'NovosgaCustomersBundle' %}
+
+{% block title -%}
+    {{ 'title'|trans }}
+{%- endblock %} 
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/novosgacustomers/css/style.css') }}">
+{% endblock %}
