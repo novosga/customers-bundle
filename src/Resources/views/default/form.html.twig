@@ -44,7 +44,7 @@
                         {% for a in atendimentos %}
                             <tr>
                                 <td>{{ a.senha }}</td>
-                                <td>{{ a.dataChegada|date('d/m/Y H:i') }}</td>
+                                <td>{{ a.dataChegada|date('d/m/Y H:i', a.unidade.timezone) }}</td>
                                 <td>{{ a.status }}</td>
                             </tr>
                         {% endfor %}
