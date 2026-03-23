@@ -3,17 +3,21 @@
     "license": "MIT",
     "type": "symfony-module",
     "autoload": {
-        "psr-4": { "Novosga\\CustomersBundle\\": "src/" }
+        "psr-4": {
+            "Novosga\\CustomersBundle\\": "src/"
+        }
     },
     "autoload-dev": {
-        "psr-4": { "Novosga\\CustomersBundle\\Tests\\": "tests/" }
+        "psr-4": {
+            "Novosga\\CustomersBundle\\Tests\\": "tests/"
+        }
     },
     "require": {
         "php": ">=8.2",
         "doctrine/orm": "^3.2",
         "novosga/core": "2.3.x-dev",
-        "symfony/framework-bundle": "7.1.*",
-        "symfony/form": "7.1.*",
+        "symfony/framework-bundle": "7.4.*",
+        "symfony/form": "7.4.*",
         "pagerfanta/doctrine-orm-adapter": "*",
         "pagerfanta/pagerfanta": "^4.6"
     },
