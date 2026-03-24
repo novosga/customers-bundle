@@ -48,7 +48,7 @@ class DefaultController extends AbstractController
         Request $request,
         ClienteRepositoryInterface $repository,
     ): Response {
-        $search = $request->get('q', '');
+        $search = $request->query->get('q', '');
         /** @var UsuarioInterface */
         $usuario = $this->getUser();
         $unidade = $usuario->getLotacao()->getUnidade();
@@ -79,7 +79,7 @@ class DefaultController extends AbstractController
 
         $query = $qb->getQuery();
 
-        $currentPage = max(1, (int) $request->get('p'));
+        $currentPage = max(1, (int) $request->query->get('p'));
 
         $adapter = new QueryAdapter($query);
         $view = new TwitterBootstrap5View();
@@ -94,7 +94,7 @@ class DefaultController extends AbstractController
                 $params = [];
                 $vars = ['q'];
                 foreach ($vars as $name) {
-                    $value = $request->get($name);
+                    $value = $request->query->get($name);
                     if ($value !== null) {
                         $params[] = "{$name}={$value}";
                     }
