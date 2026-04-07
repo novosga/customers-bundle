@@ -6,6 +6,10 @@
         <source>module.name</source>
         <target>Clientes</target>
       </trans-unit>
+      <trans-unit id="module.description">
+        <source>module.description</source>
+        <target>Cadastro e gerenciamento dos clientes atendidos</target>
+      </trans-unit>
       <trans-unit id="title">
         <source>title</source>
         <target>Clientes</target>
