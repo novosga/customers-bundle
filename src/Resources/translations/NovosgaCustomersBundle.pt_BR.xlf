@@ -42,6 +42,18 @@
         <source>button.back</source>
         <target>Voltar</target>
       </trans-unit>
+      <trans-unit id="button.ticket_history">
+        <source>button.ticket_history</source>
+        <target>Histórico de atendimentos</target>
+      </trans-unit>
+      <trans-unit id="button.edit">
+        <source>button.edit</source>
+        <target>Editar</target>
+      </trans-unit>
+      <trans-unit id="label.no_tickets">
+        <source>label.no_tickets</source>
+        <target>Nenhum atendimento encontrado</target>
+      </trans-unit>
       <trans-unit id="label.search">
         <source>label.search</source>
         <target>Buscar</target>
@@ -94,6 +106,10 @@
           <source>label.gender.unknown</source>
           <target>Outro</target>
       </trans-unit>
+      <trans-unit id="label.birthday">
+        <source>label.birthday</source>
+        <target>Data de nascimento</target>
+      </trans-unit>
       <trans-unit id="label.notes">
           <source>label.notes</source>
           <target>Observação</target>
@@ -110,17 +126,13 @@
           <source>label.service</source>
           <target>Serviço</target>
       </trans-unit>
-      <trans-unit id="label.status_agendado">
-          <source>label.status_agendado</source>
-          <target>Agendado</target>
+      <trans-unit id="label.unit">
+          <source>label.unit</source>
+          <target>Unidade</target>
       </trans-unit>
-      <trans-unit id="label.status_confirmado">
-          <source>label.status_confirmado</source>
-          <target>Confirmado</target>
-      </trans-unit>
-      <trans-unit id="label.status_nao_compareceu">
-          <source>label.status_nao_compareceu</source>
-          <target>Não compareceu</target>
+      <trans-unit id="label.priority">
+          <source>label.priority</source>
+          <target>Prioridade</target>
       </trans-unit>
     </body>
   </file>

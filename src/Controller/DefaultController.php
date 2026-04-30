@@ -131,6 +131,27 @@ class DefaultController extends AbstractController
         return $this->form($request, $service, $translator, $entity);
     }
 
+    #[Route("/{id}/tickets", name: "tickets", methods: ['GET'])]
+    public function tickets(
+        ClienteServiceInterface $service,
+        int $id,
+    ): Response {
+        $entity = $service->getById($id);
+        if (!$entity) {
+            throw $this->createNotFoundException();
+        }
+
+        $atendimentos = $this->viewAtendimentoRepository->findBy(
+            ['cliente' => $entity],
+            ['id' => 'DESC'],
+        );
+
+        return $this->render('@NovosgaCustomers/default/tickets.html.twig', [
+            'entity' => $entity,
+            'atendimentos' => $atendimentos,
+        ]);
+    }
+
     #[Route("/{id}/edit", name: "edit", methods: ['GET', 'POST'])]
     public function edit(
         Request $request,
@@ -181,19 +202,8 @@ class DefaultController extends AbstractController
             }
         }
 
-        $atendimentos = [];
-
-        if ($entity->getId()) {
-            $atendimentos = $this->viewAtendimentoRepository->findBy(
-                [ 'cliente' => $entity ],
-                [ 'id' => 'DESC' ],
-                10,
-            );
-        }
-
         return $this->render('@NovosgaCustomers/default/form.html.twig', [
             'entity' => $entity,
-            'atendimentos' => $atendimentos,
             'form' => $form,
         ]);
     }

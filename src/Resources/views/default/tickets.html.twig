@@ -1,0 +1,49 @@
+{% extends "@NovosgaCustomers/base.html.twig" %}
+
+{% trans_default_domain 'NovosgaCustomersBundle' %}
+
+{% block body %}
+    <div class="d-flex">
+        <div>
+            <h1>
+                <i class="fa fa-history" aria-hidden="true"></i> {{ 'label.customer_tickets'|trans }}
+            </h1>
+            <p>{{ entity.nome }}</p>
+        </div>
+        <div class="ms-auto mt-3">
+            <a href="{{ path('novosga_customers_edit', { id: entity.id }) }}" class="btn btn-outline-secondary ms-2">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                {{ 'button.back'|trans }}
+            </a>
+        </div>
+    </div>
+
+    <table class="table table-hover border">
+        <thead>
+            <tr class="table-primary">
+                <th>{{ 'label.ticket'|trans }}</th>
+                <th>{{ 'label.unit'|trans }}</th>
+                <th>{{ 'label.service'|trans }}</th>
+                <th>{{ 'label.priority'|trans }}</th>
+                <th>{{ 'label.date'|trans }}</th>
+                <th>{{ 'label.status'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in atendimentos %}
+                <tr>
+                    <td>{{ a.senha }}</td>
+                    <td>{{ a.unidade }}</td>
+                    <td>{{ a.servico }}</td>
+                    <td>{{ a.prioridade }}</td>
+                    <td>{{ a.dataChegada|date('d/m/Y H:i', a.unidade.timezone) }}</td>
+                    <td>{{ a.status }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3" class="text-center text-muted">{{ 'label.no_tickets'|trans }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

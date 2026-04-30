@@ -10,8 +10,16 @@
             </h1>
             <p>{{ 'subtitle'|trans }}</p>
         </div>
+        <div class="ms-auto mt-3">
+            {% if entity.id %}
+                <a href="{{ path('novosga_customers_tickets', { id: entity.id }) }}" class="btn btn-outline-secondary ms-2">
+                    <i class="fa fa-history"></i>
+                    {{ 'button.ticket_history'|trans }}
+                </a>
+            {% endif %}
+        </div>
     </div>
-        
+
     {{ form_start(form) }}
 
         {% include 'flashMessages.html.twig' %}
@@ -20,42 +28,66 @@
             <div class="col-md-5">
                 {{ form_row(form.nome) }}
 
-                {{ form_row(form.documento) }}
+                <div class="row">
+                    <div class="col-md-4">
+                        {{ form_row(form.documento) }}
+                    </div>
+                    <div class="col-md-8">
+                        {{ form_row(form.email) }}
+                    </div>
+                </div>
 
-                {{ form_row(form.email) }}
-
-                {{ form_row(form.telefone) }}
-
-                {{ form_row(form.genero) }}
+                <div class="row">
+                    <div class="col-md-4">
+                        {{ form_row(form.telefone) }}
+                    </div>
+                    <div class="col-md-4">
+                        {{ form_row(form.dataNascimento) }}
+                    </div>
+                    <div class="col-md-4">
+                        {{ form_row(form.genero) }}
+                    </div>
+                </div>
 
                 {{ form_row(form.observacao) }}
             </div>
             <div class="col-md-6 offset-md-1">
-                <h4>{{ 'label.customer_tickets'|trans }}</h4>
-                <table class="table table-bordered">
-                    <thead class="thead-light">
-                        <tr>
-                            <th>{{ 'label.ticket'|trans }}</th>
-                            <th>{{ 'label.date'|trans }}</th>
-                            <th>{{ 'label.status'|trans }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for a in atendimentos %}
-                            <tr>
-                                <td>{{ a.senha }}</td>
-                                <td>{{ a.dataChegada|date('d/m/Y H:i', a.unidade.timezone) }}</td>
-                                <td>{{ a.status }}</td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                <fieldset>
+                    <legend>{{ 'label.address'|trans({}, 'messages') }}</legend>
+                    <div class="row">
+                        <div class="col-md-4">
+                            {{ form_row(form.endereco.pais) }}
+                        </div>
+                        <div class="col-md-4">
+                            {{ form_row(form.endereco.cep) }}
+                        </div>
+                        <div class="col-md-4">
+                            {{ form_row(form.endereco.estado) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            {{ form_row(form.endereco.cidade) }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ form_row(form.endereco.logradouro) }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ form_row(form.endereco.numero) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            {{ form_row(form.endereco.complemento) }}
+                        </div>
+                    </div>
+                </fieldset>
             </div>
         </div>
 
         <div class="d-flex">
             <button type="submit" class="btn btn-primary">
-                <i class="fa fa-check"></i> 
+                <i class="fa fa-check"></i>
                 {{ 'button.save'|trans }}
             </button>
 
